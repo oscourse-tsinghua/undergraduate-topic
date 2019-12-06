@@ -1,4 +1,4 @@
-## 2019年本科毕设题目介绍
+## 2020年本科毕设题目介绍
 
 https://github.com/oscourse-tsinghua/undergraduate-topic
 
@@ -6,10 +6,36 @@ https://github.com/oscourse-tsinghua/undergraduate-topic
 
 本题目的目标是，在RISC-V平台上开发基于rust语言的教学操作系统开始，研究操作系统内核技术，并在教学操作系统中进行验证性实现。可能的选题包括新硬件环境上的教学操作系统移植、新增或改进操作系统内核功能、设计操作系统内核分析工具等。
 
-#### 工作内容
+#### 总体目标
 
 1. 基于中科院计算所的PARD，在rustos内实现内存访问带宽的资源监测和隔离；
 2. 针对rust语言，设计操作系统内核的分析工具，自动化地查找内核错误；
+
+#### 1.1 RISC-V平台基于Rust语言的计算机系统综合实验设计和完善
+
+在FPGA平台上移植和适配已有的RISC-V CPU实现，完善基于Rust语言的小型教学操作系统rcore，并形成实验帮助文档。
+##### 工作内容
+ 1. 在FPGA开发板小脚丫CYC10上移植和适配支持MMU的RISC-V CPU，支持Flash和SDRAM，提供较完善的硬件功能测试集。
+ 2. 在FPGA开发板上重现和完善基于Rust语言的小型教学操作系统rcore，支持完整的操作系统实验。
+ 3. 基于已有的组成原理和操作系统实验帮助，撰写计算机系统综合实验指导文档。
+
+#### 1.2 在labled risc-v上设计和实现rcore的虚拟化扩展
+
+##### 在labled risc-v上移植rcore，并扩展rcore的实现，以支持多个rcore实例的支持。
+
+工作内容
+ 1. 重现FPGA开发板上labled risc-v和多个Linux映像的运行，完善相关帮助文档；
+ 2. 在FPGA开发板上的labled risc-v CPU上移植教学操作系统rcore，并形成帮助文档；
+ 3. 扩展rcore的实现，支持rcore映像与Linux映像的并发运行，并形成帮助文档；
+
+#### 1.3 在labled risc-v上设计和实现rcore的进程间的内存访问带宽控制
+
+在labled risc-v上移植rcore，并扩展rcore的实现，以支持rcore内多进程间的内存访问带宽控制。
+
+##### 工作内容
+ 1. 重现FPGA开发板上labled risc-v和多个Linux映像的运行，完善相关帮助文档；
+ 2. 在FPGA开发板上的labled risc-v CPU上移植教学操作系统rcore，并形成帮助文档；
+ 3. 扩展rcore的资源管理，实现进程间的内存访问带宽分配。
 
 ### 2. Android系统和应用数据的自动备份与恢复
 
