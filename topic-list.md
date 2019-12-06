@@ -19,7 +19,17 @@ https://github.com/oscourse-tsinghua/undergraduate-topic
  2. 在FPGA开发板上重现和完善基于Rust语言的小型教学操作系统rcore，支持完整的操作系统实验。
  3. 基于已有的组成原理和操作系统实验帮助，撰写计算机系统综合实验指导文档。
 
-#### 1.2 在labled risc-v上设计和实现rcore的虚拟化扩展
+#### 1.2 用Chisel语言FPGA开发板实现RISC-V CPU
+
+在FPGA平台上用用Chisel语言实现RISC-V CPU，并集成到计算机系统综合实验中。
+
+##### 工作内容
+ 1. 在FPGA开发板小脚丫CYC10上用Chisel语言RISC-V CPU，希望支持MMU；
+ 2. 替换计算机系统综合实验中的verilog语言的CPU实现，并测试其功能正确性；
+ 3. 对比verlog和chisel的实现的性能和开销特征；
+ 4. 撰写chisel CPU的实现帮助文档。
+ 
+#### 1.3 在labled risc-v上设计和实现rcore的虚拟化扩展
 
 ##### 在labled risc-v上移植rcore，并扩展rcore的实现，以支持多个rcore实例的支持。
 
@@ -28,7 +38,7 @@ https://github.com/oscourse-tsinghua/undergraduate-topic
  2. 在FPGA开发板上的labled risc-v CPU上移植教学操作系统rcore，并形成帮助文档；
  3. 扩展rcore的实现，支持rcore映像与Linux映像的并发运行，并形成帮助文档；
 
-#### 1.3 在labled risc-v上设计和实现rcore的进程间的内存访问带宽控制
+#### 1.4 在labled risc-v上设计和实现rcore的进程间的内存访问带宽控制
 
 在labled risc-v上移植rcore，并扩展rcore的实现，以支持rcore内多进程间的内存访问带宽控制。
 
