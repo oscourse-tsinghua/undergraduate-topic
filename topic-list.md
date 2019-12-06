@@ -11,7 +11,7 @@ https://github.com/oscourse-tsinghua/undergraduate-topic
 1. 基于中科院计算所的PARD，在rustos内实现内存访问带宽的资源监测和隔离；
 2. 针对rust语言，设计操作系统内核的分析工具，自动化地查找内核错误；
 
-#### 1.1 RISC-V平台基于Rust语言的计算机系统综合实验设计和完善
+#### 1.1 RISC-V平台基于Rust语言的计算机系统综合实验设计和完善（范志鹏）
 
 在FPGA平台上移植和适配已有的RISC-V CPU实现，完善基于Rust语言的小型教学操作系统rcore，并形成实验帮助文档。
 ##### 工作内容
