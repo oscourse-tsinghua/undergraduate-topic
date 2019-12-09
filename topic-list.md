@@ -29,22 +29,22 @@ https://github.com/oscourse-tsinghua/undergraduate-topic
  3. 对比verlog和chisel的实现的性能和开销特征；
  4. 撰写chisel CPU的实现帮助文档。
  
-#### 1.3 在labled risc-v上设计和实现rcore的虚拟化扩展
+#### 1.3 在labeled risc-v上设计和实现rcore的虚拟化扩展
 
-##### 在labled risc-v上移植rcore，并扩展rcore的实现，以支持多个rcore实例的支持。
+##### 在labeled risc-v上移植rcore，并扩展rcore的实现，以支持多个rcore实例的支持。
 
 工作内容
  1. 重现FPGA开发板上labled risc-v和多个Linux映像的运行，完善相关帮助文档；
  2. 在FPGA开发板上的labled risc-v CPU上移植教学操作系统rcore，并形成帮助文档；
  3. 扩展rcore的实现，支持rcore映像与Linux映像的并发运行，并形成帮助文档；
 
-#### 1.4 在labled risc-v上设计和实现rcore的进程间的内存访问带宽控制
+#### 1.4 在labeled risc-v上设计和实现rcore的进程间的内存访问带宽控制
 
-在labled risc-v上移植rcore，并扩展rcore的实现，以支持rcore内多进程间的内存访问带宽控制。
+在labeled risc-v上移植rcore，并扩展rcore的实现，以支持rcore内多进程间的内存访问带宽控制。
 
 ##### 工作内容
- 1. 重现FPGA开发板上labled risc-v和多个Linux映像的运行，完善相关帮助文档；
- 2. 在FPGA开发板上的labled risc-v CPU上移植教学操作系统rcore，并形成帮助文档；
+ 1. 重现FPGA开发板上labeled risc-v和多个Linux映像的运行，完善相关帮助文档；
+ 2. 在FPGA开发板上的labeled risc-v CPU上移植教学操作系统rcore，并形成帮助文档；
  3. 扩展rcore的资源管理，实现进程间的内存访问带宽分配。
 
 ### 2. Android系统和应用数据的自动备份与恢复
