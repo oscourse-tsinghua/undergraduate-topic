@@ -34,8 +34,8 @@ https://github.com/oscourse-tsinghua/undergraduate-topic
 ##### 在labeled risc-v上移植rcore，并扩展rcore的实现，以支持多个rcore实例的支持。
 
 工作内容
- 1. 重现FPGA开发板上labled risc-v和多个Linux映像的运行，完善相关帮助文档；
- 2. 在FPGA开发板上的labled risc-v CPU上移植教学操作系统rcore，并形成帮助文档；
+ 1. 重现FPGA开发板上labeled risc-v和多个Linux映像的运行，完善相关帮助文档；
+ 2. 在FPGA开发板上的labeled risc-v CPU上移植教学操作系统rcore，并形成帮助文档；
  3. 扩展rcore的实现，支持rcore映像与Linux映像的并发运行，并形成帮助文档；
 
 #### 1.4 在labeled risc-v上设计和实现rcore的进程间的内存访问带宽控制
