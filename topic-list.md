@@ -19,15 +19,16 @@ https://github.com/oscourse-tsinghua/undergraduate-topic
  2. 在FPGA开发板上重现和完善基于Rust语言的小型教学操作系统rcore，支持完整的操作系统实验。
  3. 基于已有的组成原理和操作系统实验帮助，撰写计算机系统综合实验指导文档。
 
-#### 1.2 用Chisel语言FPGA开发板实现RISC-V CPU
+#### 1.2 用Chisel语言FPGA开发板实现RISC-V CPU（贺清）
 
 在FPGA平台上用用Chisel语言实现RISC-V CPU，并集成到计算机系统综合实验中。
 
 ##### 工作内容
- 1. 在FPGA开发板小脚丫CYC10上用Chisel语言RISC-V CPU，希望支持MMU；
- 2. 替换计算机系统综合实验中的verilog语言的CPU实现，并测试其功能正确性；
- 3. 对比verlog和chisel的实现的性能和开销特征；
- 4. 撰写chisel CPU的实现帮助文档。
+ 1. 在FPGA开发板⼩脚丫CYC10上⽤Chisel语⾔RISC-V CPU，实现功能包括：RV32IC的指令集(指令编码长度为16比特，32位地址空间与整数指令，支持32个通用整数寄存器)、扩展指令集M(整数乘法和除法指令)、支持RISC-V定义的中断和异常、⽀持MMU； 
+2. 替换计算机系统综合实验中的使用verilog语⾔编写的具有相同功能的CPU，并测试其功能正确性； 
+3. 对⽐verlog和chisel的实现的性能和开销特征； 
+4. 撰写chisel CPU的实现帮助⽂档。
+
  
 #### 1.3 在labeled risc-v上设计和实现rcore的虚拟化扩展
 
