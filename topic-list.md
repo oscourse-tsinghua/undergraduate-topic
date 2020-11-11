@@ -71,26 +71,26 @@ xxxx。
 
 ### 2. 鸿蒙操作系统中开源部分的RISC-V移植
 
-本题目的目标是，将HarmonyOS中面向IoT的LiteOS-A移植到RISC-V平台上，并支持ARM平台和RISC-V平台上的LiteOS-A就虚拟设备互联。
+本题目的目标是，将HarmonyOS中面向IoT的鸿蒙Liteos-a移植到RISC-V平台上，并支持ARM平台和RISC-V平台上的鸿蒙Liteos-a就虚拟设备互联。
 
 #### 总体目标
 
-1. 完成LiteOS-A的ARM版本到RISC-V版本移植；
-2. 将鸿蒙操作系统中的应用态的分布式软总线移植到RISC-V平台上，并支持LiteOS-A的虚拟设备互联；
+1. 完成鸿蒙Liteos-a的ARM版本到RISC-V版本移植；
+2. 将鸿蒙Liteos-a系统中的应用态的分布式软总线移植到RISC-V平台上，并支持鸿蒙Liteos-a的虚拟设备互联；
 
-#### 2.1 LiteOS-A的RISC-V移植
+#### 2.1 鸿蒙Liteos-a的RISC-V移植
 
-将ARM平台上LiteOS-A移植到RISC-V平台上。
+将ARM平台上鸿蒙Liteos-a移植到RISC-V平台上。
 
 ##### 工作内容
 
-  1. 在qemu模拟器上编译LiteOS的ARM版本，并形成一个编译和测试帮助文档；
-  2. 在qemu模拟器上进行LiteOS的RISC-V移植；
-  3. 在K210开发板上进行LiteOS的RISC-V移植。
+  1. 在qemu模拟器上编译鸿蒙Liteos-a的ARM版本，并形成一个编译和测试帮助文档；
+  2. 在qemu模拟器上进行鸿蒙Liteos-a的RISC-V移植；
+  3. 在K210开发板上进行鸿蒙Liteos-a的RISC-V移植。
 
 #### 2.2 分布式软总线的RISC-V移植
 
-将鸿蒙操作系统中的应用态的分布式软总线移植到RISC-V平台上，并支持LiteOS-A的虚拟设备互联。
+将鸿蒙操作系统中的应用态的分布式软总线移植到RISC-V平台上，并支持鸿蒙Liteos-a的虚拟设备互联。
 
 ##### 工作内容
 
