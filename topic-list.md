@@ -146,6 +146,10 @@ xxxx。
  2. 在FPGA开发板上的labeled risc-v CPU上移植教学操作系统rcore，并形成帮助文档；
  3. 扩展rcore的实现，支持rcore映像与Linux映像的并发运行，并形成帮助文档；
 
+##### 相关工作
+
+1. [甄淇深-在labeled risc-v上设计和实现rcore的虚拟化扩展](http://os.cs.tsinghua.edu.cn/research/undergraduate/zqshen2020)
+
 #### 3.4 在labeled risc-v上设计和实现rcore的进程间的内存访问带宽控制
 
 在labeled risc-v上移植rcore，并扩展rcore的实现，以支持rcore内多进程间的内存访问带宽控制。
