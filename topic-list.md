@@ -105,8 +105,9 @@ xxxx。
 
 #### 总体目标
 
-1. 基于中科院计算所的PARD，在rustos内实现内存访问带宽的资源监测和隔离；
+1. 基于中科院计算所的PARD，在rCore内实现内存访问带宽的资源监测和隔离；
 2. 针对rust语言，设计操作系统内核的分析工具，自动化地查找内核错误；
+3. 扩展RISC-V和rCore，以改进操作系统的性能；
 
 #### 3.1 RISC-V平台基于Rust语言的计算机系统综合实验设计和完善
 
@@ -158,6 +159,17 @@ xxxx。
  1. 重现FPGA开发板上labeled risc-v和多个Linux映像的运行，完善相关帮助文档；
  2. 在FPGA开发板上的labeled risc-v CPU上移植教学操作系统rcore，并形成帮助文档；
  3. 扩展rcore的资源管理，实现进程间的内存访问带宽分配。
+
+#### 3.5 RISC-V的用户态中断扩展
+
+在FPGA平台上用Chisel语言实现RISC-V CPU，实现RISC-V的用户态中断扩展，移植rCore到自己的实现上，并在rCore中扩展用户态中断支持，以支持高效的信号处理机制。
+
+##### 工作内容
+ 1. 参考已有相关工作，在小脚丫FPGA开发板10CL016上实现最新的[RV32IA规范](https://github.com/riscv/riscv-isa-manual/releases/tag/draft-20201119-6cd9eec)和[特权级支持](https://github.com/riscv/riscv-isa-manual/releases/tag/draft-20201119-6cd9eec)；
+ 2. 实现RISC-V的[N扩展](https://five-embeddev.com/riscv-isa-manual/latest/n.html#)（用户态中断）的硬件；（基本要求）
+ 3. 参考已有相关工作，把自己的RISC-V SoC实现上适配[教学操作系统rCore](https://github.com/rcore-os/rCore/)；
+ 4. 在rCore中扩展基于用户态中断的信号机制；（较高目标）
+ 5. 设计测试用例展现用户态中断的特征。
 
 ### 4. Android系统和应用数据的自动备份与恢复
 
