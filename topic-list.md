@@ -252,12 +252,6 @@ xxxx。
 2. [成佳壮对李玮祺结果的重现和改进](https://github.com/Wintersweet0/cjz-replay-lwq-graduatedesign)
 3. [周畅：基于GeoHash的地理信息应用框架设计](http://os.cs.tsinghua.edu.cn/research/paper/zchang2019)
 
-
-
-##### 相关工作
-
-1. [李玮祺-基于区块链和手机传感器的车辆位置验证](http://os.cs.tsinghua.edu.cn/research/undergraduate/lwqi2020)
-
 #### 5.2 基于区块链的车辆安全行驶信息获取与分享
 
 1. 利用邻居节点判断车辆位置。将节点可达的邻居节点数量作为判断依据，在大多数邻居可达时，判定节点位置可信；  
