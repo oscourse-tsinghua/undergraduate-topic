@@ -1,4 +1,4 @@
-## 2021年本科毕设题目介绍
+## 2022年本科毕设题目介绍
 
 https://github.com/oscourse-tsinghua/undergraduate-topic
 
