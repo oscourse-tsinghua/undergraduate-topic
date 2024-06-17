@@ -1,56 +1,64 @@
-## 2024年本科毕设题目介绍
+## 2025年本科毕设题目介绍
 
-参考：[20231008-开源毕设题目和参与同学征集](https://www.yuque.com/xyong-9fuoz/hg8kgr/lg625y278c2f60sd#byKFi)
+开源毕设的宗旨是，与志同道合者合作，做有兴趣的毕设题目，在开源社区分享毕设成果。
+
+基于上一年的开源毕设的组织情况，每年秋季学期会在这里陆续更新一部分题目，供有兴趣的同学在自己的毕设选题时参考。
 
 ### xxxx
 
 本题目的目标是，xxxx。
 
-#### 总体目标
+#### 背景
 
 1. xxxx；
 
-#### 1.1 xxxx（xxx）
+#### 目标
 
 xxxx。
 
-##### 工作内容
-
-  1. xxx。
-
-##### 相关工作
+##### 参考文献
 
 1. []()
 
-### 1. 面向FPGA的软硬件结合异步状态机接口设计与实现
+### 1. CPU与FPGA间的软硬件接口设计与实现
 
 #### 背景
 
 SoC（System on chip）即片上系统是异构芯片设计的发展方向，其中，集成了FPGA与CPU的SoC可同时具备FPGA的大规模并发式处理能力以及CPU的通用计算能力。面临的主要问题在于在FPGA程序设计中很难高效的使用到CPU的计算能力造成资源浪费。CPU对于内存的访问更方便一些，更大量的数据可以采用缓存-处理的方式；而FPGA访问内存数据需要经过总线访问时序或DMA进行操作，极不方便。它一般使用多并行+流水的方式处理大量数据，对于一些需要大缓存的算法来说不太适应。
 
-#### 目标
-
-在集成了FPGA与CPU的SoC平台上，面向FPGA硬件程序设计能够高效使用CPU计算存储资源的异步状态机规范与接口。
-
-### 2. 基于软硬件结合的透明增量式动态转义加速器设计与实现
-
-#### 背景
-
-FPGA（即硬件）在并行计算能力上远比CPU（即软件）强。FPGA已被用软硬件结合的方式用来对海量数据计算进行加速，即将FPGA作为硬件加速卡安装在传统冯诺依曼机器（以CPU、存储器为中心）中。用户可以将海量运算功能部署在FPGA中，在CPU中运行的控制程序可以与FPGA进行交互获取计算结果。但FPGA开发难度大，易用性差，阻碍了其在普通计算机中的应用。SoC
+FPGA（即硬件）在并行计算能力上远比CPU（即软件）强。FPGA已被用软硬件结合的方式用来对海量数据计算进行加速，即将FPGA作为硬件加速卡安装在传统冯诺依曼机器（以CPU、存储器为中心）中。用户可以将海量运算功能部署在FPGA中，在CPU中运行的控制程序可以与FPGA进行交互获取计算结果。但FPGA开发难度大，易用性差，阻碍了其在普通计算机中的应用。
 
 #### 目标
 
-（两条技术路线二选一）
-
-技术路线一：设计一种模块，能够在编译时对高级程序代码进行分析，将不同的计算放到FPGA与CPU中，形成FPGA可加载的bitstream与CPU可执行程序，并根据定义的接口规范自动形成信息交互接口。特征是强调增量式与透明，即可以根据当前设备配置的FPGA体积动态、增量配置转义到FPGA上运行的功能，最大化FPGA资源利用；且只要求开发者具备软件开发能力。
-
-技术路线二：设计一种模块，能够针对正在执行或将要执行的软件进行指令级别的分析，将部分计算动态加载到FPGA中。其他特征与技术路线一一致。
+1. 在集成了FPGA与CPU的SoC平台上，面向FPGA硬件程序设计能够高效使用CPU计算存储资源的异步状态机规范与接口。
+2. 设计一种模块，能够在编译时对高级程序代码进行分析，将不同的计算放到FPGA与CPU中，形成FPGA可加载的bitstream与CPU可执行程序，并根据定义的接口规范自动形成信息交互接口。特征是强调增量式与透明，即可以根据当前设备配置的FPGA体积动态、增量配置转义到FPGA上运行的功能，最大化FPGA资源利用；且只要求开发者具备软件开发能力。
+3. 设计一种模块，能够针对正在执行或将要执行的软件进行指令级别的分析，将部分计算动态加载到FPGA中。其他特征与技术路线一一致。
 
 #### 参考文献
 
-1、Programming and Synthesis for Software-defined FPGA Acceleration: Status and Future Prospects： [https://www.sfu.ca/~zhenman/files/J6-TRETS2021-SDA-Survey.pdf](https://www.sfu.ca/~zhenman/files/J6-TRETS2021-SDA-Survey.pdf)
+1. [面向硬件的异构OS设计](https://github.com/wujingbang/heterOS)
+2. 龚思衡的毕设
+3. 蒋嘉铭的毕设
+4. Programming and Synthesis for Software-defined FPGA Acceleration: Status and Future Prospects： [https://www.sfu.ca/~zhenman/files/J6-TRETS2021-SDA-Survey.pdf](https://www.sfu.ca/~zhenman/files/J6-TRETS2021-SDA-Survey.pdf)
+5. Userspace Bypass: Accelerating Syscall-intensive Applications： [https://www.usenix.org/system/files/osdi23-zhou-zhe.pdf](https://www.usenix.org/system/files/osdi23-zhou-zhe.pdf)
 
-2、Userspace Bypass: Accelerating Syscall-intensive Applications： [https://www.usenix.org/system/files/osdi23-zhou-zhe.pdf](https://www.usenix.org/system/files/osdi23-zhou-zhe.pdf)
+### 2. 操作系统内核模块的设计、实现和改进
+
+#### 背景
+
+为实现开源操作系统社区项目间的操作系统内核模块的代码级复用和协作开发，计划基于Rust语言建立一个操作系统内核模块库。参与本项目的同学可从以下几个角度参与这个操作系统内核模块库的建设。
+
+#### 目标
+
+* 利用内核模块库中的已有模块，定制具有独立特征的操作系统；
+* 改进和完善内核模块库中的已有模块：可能的改进方向是执行性能、适用场景、安全性、支持新特征等；
+* 基于你的操作系统开发需求，为内核模块库增加新模块；
+* 操作系统内核模块库的自动测试工具开发和完善；
+
+#### 参考文献
+
+1. [kern-crates](https://github.com/kern-crates)
+  * [已有内核模块列表](https://kern-crates.github.io/.github/)
 
 ### 3. 跨操作系统的异步驱动模块设计与实现
 
@@ -92,6 +100,7 @@ FPGA（即硬件）在并行计算能力上远比CPU（即软件）强。FPGA已
 3. Embassy. Embassy. *Embassy* [https://embassy.dev/](https://embassy.dev/).
 4. Specifications – RISC-V International. [https://riscv.org/technical/specifications/](https://riscv.org/technical/specifications/).
 5. Documentation - QEMU. [https://wiki.qemu.org/Documentation#For_developers](https://wiki.qemu.org/Documentation#For_developers).
+
 ### 5. 在FPGA上的共享调度器设计与实现
 
 共享调度器：将协程引入内核，以协程为任务单元，为其添加优先级作为调度依据。共享调度器基于协程对系统调用进行了异步化改造。
@@ -209,6 +218,4 @@ ReL4是用Rust重写的支持seL4在RISCV上的系统调用的微内核，用户
 
 1. [Singularity: rethinking the software stack](https://dl.acm.org/doi/abs/10.1145/1243418.1243424)
 2. [RedLeaf: Isolation and Communication in a Safe Operating System](https://www.usenix.org/conference/osdi20/presentation/narayanan-vikram)
-
-### 10. 单地址空间隔离模块间异步通信方法研究
 
