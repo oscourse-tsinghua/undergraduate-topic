@@ -42,23 +42,54 @@ FPGA（即硬件）在并行计算能力上远比CPU（即软件）强。FPGA已
 4. Programming and Synthesis for Software-defined FPGA Acceleration: Status and Future Prospects： [https://www.sfu.ca/~zhenman/files/J6-TRETS2021-SDA-Survey.pdf](https://www.sfu.ca/~zhenman/files/J6-TRETS2021-SDA-Survey.pdf)
 5. Userspace Bypass: Accelerating Syscall-intensive Applications： [https://www.usenix.org/system/files/osdi23-zhou-zhe.pdf](https://www.usenix.org/system/files/osdi23-zhou-zhe.pdf)
 
-### 2. 操作系统内核模块的设计、实现和改进
+### 2. Rust组件化操作系统设计、实现和改进
 
 #### 背景
 
-为实现开源操作系统社区项目间的操作系统内核模块的代码级复用和协作开发，计划基于Rust语言建立一个操作系统内核模块库。参与本项目的同学可从以下几个角度参与这个操作系统内核模块库的建设。
+为实现开源操作系统社区项目间的操作系统内核模块的代码级复用和协作开发，计划基于Rust语言建立一个可复用Rust内核组件库，并定制多种架构的操作系统内核。参与本项目的同学可从以下几个角度参与这个操作系统内核模块库的建设。
 
 #### 目标
 
-* 利用内核模块库中的已有模块，定制具有独立特征的操作系统；
-* 改进和完善内核模块库中的已有模块：可能的改进方向是执行性能、适用场景、安全性、支持新特征等；
-* 基于你的操作系统开发需求，为内核模块库增加新模块；
-* 操作系统内核模块库的自动测试工具开发和完善；
+- 利用内核组件库中的已有模块，定制具有独立特征的操作系统内核；
+- 改进和完善内核组件库中的已有组件：可能的改进方向是执行性能、适用场景、安全性、支持新特征等；
+- 基于你的操作系统开发需求，为内核模块库增加新组件；
+- 操作系统内核组件库的自动测试工具开发和完善；
+- 操作系统内核组件的静态分析工具和和集成平台开发和完善；
 
 #### 参考文献
 
-1. [kern-crates](https://github.com/kern-crates)
-  * [已有内核模块列表](https://kern-crates.github.io/.github/)
+- [组件化操作系统](https://opencamp.cn/os2edu/camp/2024fall/stage/3?tab=video)：关于组件化操作系统的教学视频；
+
+- - [组件化内核的构建方法与示例](https://www.yuque.com/xyong-9fuoz/hg8kgr/yrqlvc26nf8qfrcl)：石磊的关于组件化操作系统的技术报告；
+
+#### 内核组件库
+
+- [内核模块组织kern-crates](https://github.com/kern-crates)
+
+- [已有模块列表](https://kern-crates.github.io/.github/)
+
+- [内核模块自动测试工具](https://github.com/kern-crates/testing/wiki/组件化多仓CI开发日志)
+
+- [内核模块静态分析工具](https://github.com/os-checker/os-checker/)
+
+- - [Rust crate静态分析平台使用帮助文档](https://os-checker.github.io/book/)
+  - [kern-crates内核组件的静态分析结果](https://kern-crates.github.io)
+
+#### 已有的组件化OS列表
+
+- 王润基：[zCore](https://github.com/kern-crates/zCore)
+
+- - [zCore模块化的crates仓库列表](https://github.com/kern-crates/zCore?tab=readme-ov-file#list-of-zcores-modular-crates)
+
+- 贾越凯：[ArceOS](https://github.com/arceos-org/arceos)
+
+- - [List of crates in ArceOS](https://arceos.org/arceos/)
+
+- 郑友捷：[Starry-OS](https://github.com/Starry-OS/Starry/)
+
+- 杨金博：[ByteOS](https://github.com/Byte-OS/byteos)
+
+- 陈林峰：[Alien](https://github.com/Godones/Alien/)
 
 ### 3. 跨操作系统的异步驱动模块设计与实现
 
