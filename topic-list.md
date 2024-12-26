@@ -60,7 +60,7 @@ FPGA（即硬件）在并行计算能力上远比CPU（即软件）强。FPGA已
 
 - [组件化操作系统](https://opencamp.cn/os2edu/camp/2024fall/stage/3?tab=video)：关于组件化操作系统的教学视频；
 
-- - [组件化内核的构建方法与示例](https://www.yuque.com/xyong-9fuoz/hg8kgr/yrqlvc26nf8qfrcl)：石磊的关于组件化操作系统的技术报告；
+  - [组件化内核的构建方法与示例](https://www.yuque.com/xyong-9fuoz/hg8kgr/yrqlvc26nf8qfrcl)：石磊的关于组件化操作系统的技术报告；
 
 #### 内核组件库
 
@@ -72,18 +72,18 @@ FPGA（即硬件）在并行计算能力上远比CPU（即软件）强。FPGA已
 
 - [内核模块静态分析工具](https://github.com/os-checker/os-checker/)
 
-- - [Rust crate静态分析平台使用帮助文档](https://os-checker.github.io/book/)
+  - [Rust crate静态分析平台使用帮助文档](https://os-checker.github.io/book/)
   - [kern-crates内核组件的静态分析结果](https://kern-crates.github.io)
 
 #### 已有的组件化OS列表
 
 - 王润基：[zCore](https://github.com/kern-crates/zCore)
 
-- - [zCore模块化的crates仓库列表](https://github.com/kern-crates/zCore?tab=readme-ov-file#list-of-zcores-modular-crates)
+  - [zCore模块化的crates仓库列表](https://github.com/kern-crates/zCore?tab=readme-ov-file#list-of-zcores-modular-crates)
 
 - 贾越凯：[ArceOS](https://github.com/arceos-org/arceos)
 
-- - [List of crates in ArceOS](https://arceos.org/arceos/)
+  - [List of crates in ArceOS](https://arceos.org/arceos/)
 
 - 郑友捷：[Starry-OS](https://github.com/Starry-OS/Starry/)
 
