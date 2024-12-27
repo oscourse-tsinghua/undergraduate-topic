@@ -156,22 +156,73 @@ FPGA（即硬件）在并行计算能力上远比CPU（即软件）强。FPGA已
 3. Embassy. Embassy. *Embassy* [https://embassy.dev/](https://embassy.dev/).
 4. Specifications – RISC-V International. [https://riscv.org/technical/specifications/](https://riscv.org/technical/specifications/).
 5. Asanovic, K. *et al.* The Rocket Chip Generator.
-### 6. 微内核操作系统ReL4中基于用户态中断的异步系统调用设计
 
-ReL4是用Rust重写的支持seL4在RISCV上的系统调用的微内核，用户态中断允许应用不经过内核直接向其他应用发送信号。当前的ReL4微内核以同步IPC进行系统调用。
+### 6. 微内核操作系统设计、实现和改进
+
+#### 背景
+
+用户态中断允许应用不经过内核直接向其他应用发送信号。目前x86和RISC-V平台上都有用户态中断的支持，其中x86系列中有CPU芯片支持用户态中断，RISC-V上的用户态支持是在QEMU模拟器和FPGA上实现的，RISC-V上还有中断控制器与调度器结合的硬件实现TAIC；微内核操作系统seL4的Rust重写实现；reL4中也对RISC-V和ARM平台有了初步的支持，reL4在RISC-V上还提供异步通知机制、异步IPC和异步系统调用。这些已有工作为基于软硬协同的微内核操作系统IPC性能优化提供了必要的基础。本项目将继续沿着利用用户态中断等硬件支持来提升微内核操作系统的IPC性能。
 
 #### 目标
 
+本项目将继续沿着利用用户态中断等硬件支持来提升微内核操作系统的IPC性能的方向，在RISC-V、x86和ARM平台上，围绕QEMU和FPGA上的硬件改进、reL4的软件异步机制适配和改进、reL4上的传统操作系统功能实现等研究点开展研究工作。
+
+#### 已有参考
+
+* 项晨东-[基于用户态中断技术实践报告](https://www.xuetangx.com/learn/THU0809100czxt/THU0809100czxt/14294493/video/25500375)：这个工作在QEMU模拟器中实现了x86用户态中断机制，支持在Linux中使用用户态中断机制给指定进程发送用户中断。
+
+   * [问题以及探究过程](https://github.com/OS-F-4/usr-intr/blob/main/ppt/qemu工作文档分块/问题以及探究过程.md)
+
+* 田凯夫：[RISC-V 用户态中断扩展设计与实现](https://www.xuetangx.com/learn/THU0809100czxt/THU0809100czxt/14294493/video/35643597)（技术报告）：这个工作在QEMU模拟器和FPGA上实现了RISC-V的用户态中断机制，并利用用户态中断优化了seL4微内核的IPC性能。
+
+   * [代码和文档](https://www.yuque.com/xyong-9fuoz/hg8kgr/nlr21043ghhmmuf9#gXRW2)
+
+* 廖东海、朱懿、李龙昊：reL4微内核操作系统的设计与实现：这个工作目前已在RISC-V上已通过基准测试，有基于用户态中断的异步通知、异步IPC和异步系统调用支持；在ARM平台上通过基准测试；
+
+   * [ReL4：基于用户态中断的高性能异步微内核设计与实现](https://www.yuque.com/xyong-9fuoz/hg8kgr/xd49izet7xd38gdy#aVrhG)（报告）
+
+   * [reL4 book](https://rel4team.github.io/zh/)（文档）
+
+   * [reL4 org](https://github.com/rel4team2)（代码仓库）
+
+#### 6.1 reL4在x86上的移植和IPC性能优化
+
+##### 任务要求
+
+1. 重现已有相关工作；
+
+2. 将reL4移植到x86平台上，并通过微内核的基准测试；
+
+3. 在QEMU模块器环境下，利用x86的用户态中断支持reL4的通知机制、异步IPC和异步系统调用；
+
+4. 在x86真实机器上，利用x86的用户态中断支持reL4的通知机制、异步IPC和异步系统调用；
+
+5. 性能测试对比分析；
+
+#### 6.2 reL4在RISC-V上重构和IPC性能优化
+
+##### 任务要求
+
+1. 重现已有相关工作；
+2. 基于TAIC重构reL4的异步通知机制、异步IPC和异步系统调用；
+3. 基于TAIC重构reL4的调度机制；
+4. 性能测试对比分析；
+
+#### 6.3 微内核操作系统ReL4中基于用户态中断的异步系统调用设计
+
+##### 任务要求
+
 利用RISCV平台已有的用户态中断机制，对ReL4微内核中的同步系统调用进行异步化改造，减少内核陷入和上下文切换次数，从而降低IPC开销，提升系统性能。
 
-#### 任务要求
-
 1. 理解微内核的相关概念，了解微内核的发展趋势和性能瓶颈。
+
 2. 理解seL4的IPC机制，理解其中的优势和弊端。
+
 3. 学习理解用户态中断的相关知识。
+
 4. 学习使用Rust异步编程的相关技能。
 
-#### 参考文献
+##### 参考文献
 
 [1] Klein G, Elphinstone K, Heiser G, et al. seL4: Formal verification of an OS kernel[C]//Proceedings of the ACM SIGOPS 22nd symposium on Operating systems principles. 2009: 207-220.
 
