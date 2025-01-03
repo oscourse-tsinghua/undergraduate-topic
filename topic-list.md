@@ -301,3 +301,16 @@ ReL4是用Rust重写的支持seL4在RISCV上的系统调用的微内核，用户
 1. [Singularity: rethinking the software stack](https://dl.acm.org/doi/abs/10.1145/1243418.1243424)
 2. [RedLeaf: Isolation and Communication in a Safe Operating System](https://www.usenix.org/conference/osdi20/presentation/narayanan-vikram)
 
+### 10. 组件化嵌入式操作系统
+
+嵌入式操作系统的应用场景是十分多样的，已有的嵌入式操作系统的特征也是差异巨大和数量众多的；但这些大同小异的嵌入式操作系统又有大量的功能组件是重复实现的，开发极致优化的嵌入式操作系统组件库，有可能改善嵌入式操作系统的代码级复用性，提高嵌入操作系统的代码质量、性能和开发效率。
+
+#### 目标
+
+通过用Rust语言重写已有的优秀嵌入式操作系统开源项目中的优秀模块，形成操作系统内核组件库中的嵌入式操作系统部分，最终形成一个完整的嵌入式操作系统组件库，用于多CPU平台和多应用场景的嵌入式操作系统定制服务。
+
+#### 已有工作
+
+* 袁子为、施诺晖 - [embassy-preempt](https://kmsorsms.github.io/embassy_preempt/)：embassy_preempt是一个嵌入式异步实时操作系统的调度模块。它通过Rust提供的协程机制，结合embassy的异步执行器的实现方式，并借鉴传统嵌入式实时操作系统uCOSII的任务切换机制，在任务调度时，若当前任务主动让权，则会进行栈复用；若当前任务被抢占，则会进行栈分配，并进行现场的保存，使得embassy_preempt同时具有了embassy低内存开销的优势以及uCOSII高实时性的特点。
+
+* 李东阳、周宜晖、陈云逸 - [Rust_FreeRTOS](https://github.com/LDYang694/RFREERTOS/blob/master/docs/R-FreeRTOS%E6%9C%80%E7%BB%88%E6%B1%87%E6%8A%A5.pptx)：用Rust重写FreeRTOS的尝试。
